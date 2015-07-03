@@ -1,0 +1,31 @@
+{
+  "name": "bring",
+  "main": ["bring.min.js"],
+  "version": "0.1.1",
+  "homepage": "https://github.com/idomusha/bring",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/idomusha/bring"
+  },
+  "authors": [
+    "idomusha <idomusha@gmail.com>"
+  ],
+  "description": "loads data with several options (cache, callback, progress bar ...)",
+  "keywords": [
+    "ajax",
+    "load",
+    "data",
+    "cache",
+    "jquery"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "index.html",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md"
+  ],
+  "dependencies": {
+    "jquery": ">=1.7"
+  }
+}

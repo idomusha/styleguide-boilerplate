@@ -1,340 +1,577 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Styleguide Boilerplate</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="favicon.ico" />
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Styleguide Boilerplate</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico"/>
 
-        <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
-        <!-- <link href='path/to/your/custom/fonts' rel='stylesheet' type='text/css'> -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+    <!-- <link href='path/to/your/custom/fonts' rel='stylesheet' type='text/css'> -->
 
-        <link rel="stylesheet" href="js/vendor/X-rayHTML/X-rayHTML.css">
-        <link rel="stylesheet" href="js/vendor/prism/prism.css">
-        <link rel="stylesheet" href="css/md-github-flavored.css">
-        <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="js/vendor/X-rayHTML/X-rayHTML.css">
+    <link rel="stylesheet" href="js/vendor/prism/prism.css">
+    <link rel="stylesheet" href="css/md-github-flavored.css">
+    <link rel="stylesheet" href="css/main.css">
 
-        <!-- <link rel="stylesheet" href="path/to/your/project/css"> -->
+    <!-- <link rel="stylesheet" href="path/to/your/project/css"> -->
 
-    </head>
-    <body class="sg-body">
+</head>
+<body class="sg-body">
 
-        <div class="sg-topper">
-            <div class="sg-nav-trigger">
-                <span></span>
-            </div>
-            <div class="sg-topper-title">Styleguide</div>
-        </div>
+<div class="sg-topper">
+    <div class="sg-nav-trigger">
+        <span></span>
+    </div>
+    <div class="sg-topper-title">Styleguide</div>
+</div>
 
-        <div class="sg-aside">
-            <ul class="sg-nav">
-                <li><span><i class="sg-ico-html"></i>Styles</span>
+<div class="sg-aside">
+    <ul class="sg-nav">
+        <li><span><i class="sg-ico-identity"></i>Identity</span>
+            <ul>
+                <li><a href="#sg-colors">Colors</a></li>
+                <li><span>Typography</span>
                     <ul>
-                        <li><a href="#sg-grid">Grid system</a></li>
-                        <li><a href="#sg-colors">Colors</a></li>
-                        <li><span>Typography</span>
-                            <ul>
-                                <li><a href="#sg-fonts">Fonts</a></li>
-                                <li><a href="#sg-headings">Headings</a></li>
-                                <li><a href="#sg-text">Text</a></li>
-                                <li><a href="#sg-lists">Lists</a></li>
-                            </ul>
-                        </li>
-                        <li><span>Buttons</span>
-                            <ul>
-                                <li><a href="#sg-buttons">Button 01</a></li>
-                                <li><a href="#sg-buttons">Button 02</a></li>
-                            </ul>
-                        </li>
-                        <li><span>Forms</span>
-                            <ul>
-                                <li><a href="#sg-forms">Form 01</a></li>
-                                <li><a href="#sg-forms">Form 02</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="#sg-fonts">Fonts</a></li>
+                        <li><a href="#sg-headings">Headings</a></li>
+                        <li><a href="#sg-text">Text</a></li>
+                        <li><a href="#sg-lists">Lists</a></li>
                     </ul>
                 </li>
-                <li><span><i class="sg-ico-documentation"></i>Documentation</span>
+                <li><span>Components</span>
                     <ul>
-                        <li><a href="#sg-readme">README.md</a></li>
-                        <li><a href="#sg-cssreadme">CSSReadme.md</a></li>
+                        <li><a href="#sg-blocks">Blocks</a></li>
+                        <li><a href="#sg-icons">Icons</a></li>
                     </ul>
                 </li>
-                <li><span><i class="sg-ico-ressources"></i>Ressources</span>
+
+            </ul>
+        </li>
+        <li><span><i class="sg-ico-html"></i>Styles</span>
+            <ul>
+                <li><a href="#sg-grid">Grid system</a></li>
+                <li><span>Buttons</span>
                     <ul>
-                        <li><span>Tools</span>
-                            <ul>
-                                <li><a href="https://github.com/bbrochier/styleguide-boilerplate">Styleguide Boilerplate</a></li>
-                                <li><a href="https://guides.github.com/features/mastering-markdown/">Mastering Markdown</a></li>
-                                <li><a href="http://gridcalculator.dk/">Grid Calculator</a></li>
-                                <li><a href="http://codeguide.co/">Code Guide by @mdo</a></li>
-                            </ul>
+                        <li><a href="#sg-buttons-style">Buttons style</a></li>
+                        <li><a href="#sg-buttons-size">Buttons size</a></li>
+                        <li><a href="#sg-buttons-color">Buttons color</a></li>
+                        <li><a href="#sg-buttons-transparency">Buttons transparency</a></li>
+                        <li><a href="#sg-buttons-font">Buttons font</a></li>
+                    </ul>
+                </li>
+                <li><span>Forms</span>
+                    <ul>
+                        <li><a href="#sg-forms-text">Input text</a></li>
+                        <li><a href="#sg-forms-select">Select</a></li>
+                        <li><a href="#sg-forms-radio">Radio</a></li>
+                        <li><a href="#sg-forms-checkbox">Checkbox</a></li>
+                        <li><a href="#sg-forms-textarea">Textarea</a></li>
+                        <li><a href="#sg-forms-datepicker">Datepicker</a></li>
+                        <li><a href="#sg-forms-alerts">Alerts</a></li>
+                    </ul>
+                </li>
+                <li><a href="#sg-sliders">Sliders</a></li>
+            </ul>
+        </li>
+        <li><span><i class="sg-ico-documentation"></i>Documentation</span>
+            <ul>
+                <li><a href="#sg-helpers">CSS helpers</a></li>
+                <li><a href="#sg-readme">README.md</a></li>
+                <li><a href="#sg-cssreadme">CSSReadme.md</a></li>
+            </ul>
+        </li>
+        <li><span><i class="sg-ico-ressources"></i>Ressources</span>
+            <ul>
+                <li><span>Tools</span>
+                    <ul>
+                        <li><a href="https://github.com/bbrochier/styleguide-boilerplate">Styleguide Boilerplate</a>
                         </li>
-                        <li><span>Inspirations</span>
-                            <ul>
-                                <li><a href="http://getbootstrap.com/">Bootstrap</a></li>
-                                <li><a href="http://www.google.com/design/spec/material-design/introduction.html">Google Material Design</a></li>
-                                <li><a href="http://material-ui.com/">Material UI</a></li>
-                                <li><a href="http://www.oceaniahotels.com/html/pages:99.styleguide%252F01.styleguide.html.twig">Oceania's styleguide</a></li>
-                            </ul>
-                        </li>
-                        <li><span>Articles</span>
-                            <ul>
-                                <li><a href="http://styleguides.io">styleguides.io</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="https://guides.github.com/features/mastering-markdown/">Mastering Markdown</a></li>
+                        <li><a href="http://gridcalculator.dk/">Grid Calculator</a></li>
+                        <li><a href="http://codeguide.co/">Code Guide by @mdo</a></li>
+                    </ul>
+                </li>
+                <li><span>Inspirations</span>
+                    <ul>
+                        <li><a href="http://getbootstrap.com/">Bootstrap</a></li>
+                        <li><a href="http://www.google.com/design/spec/material-design/introduction.html">Google
+                            Material Design</a></li>
+                        <li><a href="http://material-ui.com/">Material UI</a></li>
+                        <li><a href="http://www.oceaniahotels.com/html/pages:99.styleguide%252F01.styleguide.html.twig">Oceania's
+                            styleguide</a></li>
+                    </ul>
+                </li>
+                <li><span>Articles</span>
+                    <ul>
+                        <li><a href="http://styleguides.io">styleguides.io</a></li>
                     </ul>
                 </li>
             </ul>
-        </div><!--/.sg-aside -->
+        </li>
+    </ul>
+</div>
+<!--/.sg-aside -->
 
 
-        <div class="sg-main">
+<div class="sg-main">
 
-            <div class="sg-section">
-                <div class="sg-h1">Styles</div>
-            </div><!--/.sg-section -->
+    <section class="sg-section">
+        <div class="sg-h1">Identity</div>
 
-            <div id="sg-grid" class="sg-section">
-                <div class="sg-h2">Grid system</div>
+        <article id="sg-colors" class="sg-article">
+            <div class="sg-h2">Colors</div>
 
-                <div class="sg-callout sg-callout-danger">
-                    <div class="sg-callout-title">No grid system provided</div>
-                    <p>The styleguide does not impose any grid system so you can use your favorite.</p>
-                </div>
-
-                <div class="sg-callout sg-callout-info">
-                    <div class="sg-callout-title">Grid system helper</div>
-                    <p>To display your grid in the styleguide you can use <code>&lt;div class="sg-cell">your text&lt;/div></code> as cell filler inside your cols. <em>(see example below)</em></p>
-                </div>
-
-                <div class="sg-cell">1</div>
-            </div><!--/.sg-section -->
-
-            <div id="sg-colors" class="sg-section">
-                <div class="sg-h2">Colors</div>
+            <div class="sg-article">
+                <div class="sg-h3">Color blender</div>
                 <div class="sg-callout">
-                    <div class="sg-callout-title">Naming helper</div>
-                    <p>When adding new colors, you can <a href="http://www.color-blindness.com/color-name-hue/" target="_blank">find the name of the color by hexadecimal code</a></p>
+                    <div class="sg-callout-title">Color helper</div>
+                    <p>When adding new colors, you can use the color blender to find the exact color you need: you will
+                        get
+                        the
+                        corresponding hexadecimal code, RGB, hue and name.<br>
+                        Rather than enter the value in hexadecimal or RGB, you can directly click on the color in the
+                        'Single
+                        colors' section. :)
+                    </p>
                 </div>
+                <div class="sg-color-blender">
+                    <div class="fields">
 
-                <div class="sg-h3">Single colors</div>
-
-                <div class="sg-color">
-                    <span style="background-color: #03a9f4"></span>
-                    <span><strong>#03a9f4</strong><br>rgb(3,169,244)<br>@color-blue-deepSky</span>
-                </div>
-                <div class="sg-color">
-                    <span style="background-color: #e91e63"></span>
-                    <span><strong>#e91e63</strong><br>rgb(233,30,99)<br>@color-pink-ruby</span>
-                </div>
-                <br><br>
-                <div class="sg-h3">Group colors</div>
-
-                <ul class="sg-color-group">
-                    <li class="sg-color-title">Blue</li>
-                    <li class="sg-color-dark" style="background-color: #01579b;">
-                        <span>@color-blue-cobalt</span>
-                        <span>#01579b</span>
-                    </li>
-                    <li class="sg-color-dark" style="background-color: #03a9f4;">
-                        <span>@color-blue-deepSky</span>
-                        <span>#03a9f4</span>
-                    </li>
-                    <li class="sg-color-light" style="background-color: #81d4fa;">
-                        <span>@color-blue-lightSky</span>
-                        <span>#81d4fa</span>
-                    </li>
-                    <li class="sg-color-light" style="background-color: #e1f5fe;">
-                        <span>@color-blue-lightCyan</span>
-                        <span>#e1f5fe</span>
-                    </li>
-                </ul>
-                <ul class="sg-color-group">
-                    <li class="sg-color-title">Pink</li>
-                    <li class="sg-color-dark" style="background-color: #880e4f;">
-                        <span>@color-pink-jazzberry</span>
-                        <span>#880e4f</span>
-                    </li>
-                    <li class="sg-color-dark" style="background-color: #e91e63;">
-                        <span>@color-pink-ruby</span>
-                        <span>#e91e63</span>
-                    </li>
-                    <li class="sg-color-light" style="background-color: #f06292;">
-                        <span>@color-pink-dark</span>
-                        <span>#f06292</span>
-                    </li>
-                    <li class="sg-color-light" style="background-color: #f8bbd0;">
-                        <span>@color-pink-azalea</span>
-                        <span>#f8bbd0</span>
-                    </li>
-                </ul>
-            </div><!--/.sg-section -->
-
-            <div id="sg-fonts" class="sg-section">
-                <div class="sg-h2">Fonts</div>
-
-                <div class="sg-callout sg-callout-warning">
-                    <div class="sg-callout-title">Web fonts</div>
-                    <p>If you use web fonts for your site, don't forget to call them as well in the header of the styleguide.</p>
-                </div>
-
-                <div class="sg-h3">Roboto</div>
-                <div>
-                    <div class="sg-font" style="font-family:roboto">
-                        <div class="sg-font-title">Roboto 400 <span>@font-roboto</span></div>
-                        <div>
-                            abcdefghijklmnopqrstuvwxyz à â ç é è ê ë ï î ô ù ü û <br>
-                            ABCDEFGHIJKLMNOPQRSTUVWXYZ À Â Ç É È Ê Ë Ï Î Ô Ù Ü Û <br>
-                            1 2 3 4 5 6 7 8 9 0 % $ € & @ . , ? ! ’ “ ” ( ) - /
+                        <div class="field field-radio width-1-5 ta-c">
+                            <label>Format</label>
+                        <span class="radio-wrap">
+                            <input type="radio" value="hex" id="color-format-hex" name="color-format" checked>
+                            <label for="color-format-hex">Hex</label>
+                        </span>
+                        <span class="radio-wrap">
+                            <input type="radio" value="rgb" id="color-format-rgb" name="color-format">
+                            <label for="color-format-rgb">RGB</label>
+                        </span>
                         </div>
+                        <div class="field field-text width-1-5 ta-c">
+                            <label for="color-value">Value</label>
+                            <input id="color-value" type="text" value="" placeholder="#ffcc00">
+                        </div>
+                        <div class="field field-select width-1-5 ta-c">
+                            <label for="color-opacity">Opacity</label>
+                            <select id="color-opacity" data-default-text="Opacity">
+                                <option value="-90">-90%</option>
+                                <option value="-80">-80%</option>
+                                <option value="-70">-70%</option>
+                                <option value="-60">-60%</option>
+                                <option value="-50">-50%</option>
+                                <option value="-40">-40%</option>
+                                <option value="-30">-30%</option>
+                                <option value="-20">-20%</option>
+                                <option value="-10">-10%</option>
+                                <option value="0" selected>0</option>
+                                <option value="+10">+10%</option>
+                                <option value="+20">+20%</option>
+                                <option value="+30">+30%</option>
+                                <option value="+40">+40%</option>
+                                <option value="+50">+50%</option>
+                                <option value="+60">+60%</option>
+                                <option value="+70">+70%</option>
+                                <option value="+80">+80%</option>
+                                <option value="+90">+90%</option>
+                            </select>
+                        </div>
+
                     </div>
-
-                    <div class="sg-font" style="font-family:roboto; font-weight:700">
-                        <div class="sg-font-title">Roboto 700 <span>@font-roboto</span></div>
-                        <div>
-                            abcdefghijklmnopqrstuvwxyz à â ç é è ê ë ï î ô ù ü û <br>
-                            ABCDEFGHIJKLMNOPQRSTUVWXYZ À Â Ç É È Ê Ë Ï Î Ô Ù Ü Û <br>
-                            1 2 3 4 5 6 7 8 9 0 % $ € & @ . , ? ! ’ “ ” ( ) - /
-                        </div>
+                    <div id="color-result" class="sg-color">
+            <span class="sg-color-content">
+                <strong class="hex">#ffcc00</strong><br>
+                <span class="rgb">rgb(255,107,176)</span><br>
+                <span class="hue">Yellow</span><br>
+                <span class="name">Tangerine Yellow</span>
+            </span>
+                        <span class="sg-color-view" style="background-color: #ffcc00"></span>
                     </div>
                 </div>
-                <br>
-                <div class="sg-h3">Times New Roman</div>
-                <div>
-                    <div class="sg-font" style="font-family:'Times New Roman'">
-                        <div class="sg-font-title">Times New Roman</div>
-                        <div>
-                            abcdefghijklmnopqrstuvwxyz à â ç é è ê ë ï î ô ù ü û <br>
-                            ABCDEFGHIJKLMNOPQRSTUVWXYZ À Â Ç É È Ê Ë Ï Î Ô Ù Ü Û <br>
-                            1 2 3 4 5 6 7 8 9 0 % $ € & @ . , ? ! ’ “ ” ( ) - /
-                        </div>
-                    </div>
-
-                    <div class="sg-font" style="font-family:'Times New Roman'; font-weight:bold">
-                        <div class="sg-font-title">Times New Roman Bold</div>
-                        <div>
-                            abcdefghijklmnopqrstuvwxyz à â ç é è ê ë ï î ô ù ü û <br>
-                            ABCDEFGHIJKLMNOPQRSTUVWXYZ À Â Ç É È Ê Ë Ï Î Ô Ù Ü Û <br>
-                            1 2 3 4 5 6 7 8 9 0 % $ € & @ . , ? ! ’ “ ” ( ) - /
-                        </div>
-                    </div>
-
-                    <div class="sg-font" style="font-family:'Times New Roman'; font-style:italic">
-                        <div class="sg-font-title">Times New Roman Italic</div>
-                        <div>
-                            abcdefghijklmnopqrstuvwxyz à â ç é è ê ë ï î ô ù ü û <br>
-                            ABCDEFGHIJKLMNOPQRSTUVWXYZ À Â Ç É È Ê Ë Ï Î Ô Ù Ü Û <br>
-                            1 2 3 4 5 6 7 8 9 0 % $ € & @ . , ? ! ’ “ ” ( ) - /
-                        </div>
-                    </div>
-                </div>
-            </div><!--/.sg-section -->
-
-            <div id="sg-headings" class="sg-section">
-                <div class="sg-h2">Headings</div>
-                <div data-xrayhtml>
-<h1 class="title1">h1. heading</h1>
-<h2 class="title2">h2. heading</h2>
-<h3 class="title3">h3. heading</h3>
-<h4 class="title4">h4. heading</h4>
-<h5 class="title5">h5. heading</h5>
-<h6 class="title6">h6. heading</h6>
-                </div>
-            </div><!--/.sg-section -->
-
-            <div id="sg-text" class="sg-section">
-                <div class="sg-h2">Text</div>
-                <div data-xrayhtml>
-<p>Lorem ipsum dolor sit amet, <strong>strong text</strong> adipisicing elit. <a href="#_">Linked text</a> ratione eum nihil quos earum laudantium, eaque ullam omnis ut odio vero illum vel atque nisi iste tempora. Eius excepturi iste repellat, placeat esse aspernatur obcaecati voluptatem dolorum sapiente doloremque magnam.</p>
-<p>Deleniti sapiente blanditiis ipsa quod architecto aliquam asperiores eveniet fugit harum perspiciatis omnis voluptas nam et error itaque impedit, ratione iste accusamus unde, reiciendis quia fuga consequuntur exercitationem dolorem voluptatum. Voluptatibus qui voluptate fuga neque illo debitis corporis cumque. Exercitationem similique, quas obcaecati minima, animi, tenetur ad, quibusdam voluptatum quasi deserunt dolor officia beatae totam odio non? Quam cumque laborum, atque.</p>
-                </div>
-            </div><!--/.sg-section -->
-
-            <div id="sg-lists" class="sg-section">
-                <div class="sg-h2">Lists</div>
-                <div data-xrayhtml>
-<ul>
-    <li>Lorem ipsum dolor</li>
-    <li>Ipsa quod architecto</li>
-    <li>Ratione iste accusamus</li>
-</ul>
-                </div>
-            </div><!--/.sg-section -->
-
-            <div id="sg-buttons" class="sg-section">
-                <div class="sg-h2">Buttons</div>
-                <div data-xrayhtml>
-<button>Default button</button>
-                </div>
-            </div><!--/.sg-section -->
-
-            <div id="sg-forms" class="sg-section">
-                <div class="sg-h2">Forms</div>
-                ...
-            </div><!--/.sg-section -->
-
-
-            <div class="sg-section">
-                <div class="sg-h1">Documentation</div>
             </div>
 
-            <div class="sg-section">
-                <div class="sg-h2">Source code without snippet examples :</div>
+            <div class="sg-article">
+                <div class="sg-h3">Single colors</div>
+                <div class="sg-color">
+                    <span class="sg-color-view" style="background-color: #006bb0"></span>
+                    <span class="sg-color-content"><strong>#03a9f4</strong><br>rgb(0,107,176)<br>@color-blue-cerulean</span>
+                </div>
+                <div class="sg-color">
+                    <span class="sg-color-view" style="background-color: #00a9d9"></span>
+                    <span class="sg-color-content"><strong>#00a9d9</strong><br>rgb(0,169,217)<br>@color-blue-iris</span>
+                </div>
+                <div class="sg-color">
+                    <span class="sg-color-view" style="background-color: #7fb34a"></span>
+                    <span class="sg-color-content"><strong>#7fb34a</strong><br>rgb(127,179,74)<br>@color-green-apple</span>
+                </div>
+                <div class="sg-color">
+                    <span class="sg-color-view" style="background-color: #b71222"></span>
+                <span
+                        class="sg-color-content"><strong>#b71222</strong><br>rgb(183,18,34)<br>@color-red-fireEngine</span>
+                </div>
+            </div>
 
-                <div class="sg-h3">HTML</div>
-                <div class="xrayhtml">
-                    <pre><code class="language-markup">
-&lt;h1 class="title1">H1 code source different from the snippet&lt;/h1>
-&lt;h2 class="title2">H2 code source different from the snippet&lt;/h2>
-                    </code></pre>
+            <div class="sg-article">
+                <div class="sg-h3">Group colors</div>
+                <ul class="sg-color-group">
+                    <li class="sg-color-title">Blue Cerulean</li>
+                    <li data-color="#006bb0" data-opacity="-50"></li>
+                    <li data-color="#006bb0" data-opacity="-20"></li>
+                    <li data-color="#006bb0"></li>
+                    <li data-color="#006bb0" data-opacity="+20"></li>
+                    <li data-color="#006bb0" data-opacity="+50"></li>
+                    <li data-color="#006bb0" data-opacity="+80"></li>
+                </ul>
+                <ul class="sg-color-group">
+                    <li class="sg-color-title">Blue Iris</li>
+                    <li data-color="#00a9d9" data-opacity="-50"></li>
+                    <li data-color="#00a9d9" data-opacity="-20"></li>
+                    <li data-color="#00a9d9"></li>
+                    <li data-color="#00a9d9" data-opacity="+10"></li>
+                    <li data-color="#00a9d9" data-opacity="+50"></li>
+                    <li data-color="#00a9d9" data-opacity="+80"></li>
+                </ul>
+                <ul class="sg-color-group">
+                    <li class="sg-color-title">Green Apple</li>
+                    <li data-color="#7fb34a" data-opacity="-50"></li>
+                    <li data-color="#7fb34a" data-opacity="-20"></li>
+                    <li data-color="#7fb34a"></li>
+                    <li data-color="#7fb34a" data-opacity="+20"></li>
+                    <li data-color="#7fb34a" data-opacity="+50"></li>
+                    <li data-color="#7fb34a" data-opacity="+80"></li>
+                </ul>
+                <ul class="sg-color-group">
+                    <li class="sg-color-title">Red Fire Engine</li>
+                    <li data-color="#b71222" data-opacity="-50"></li>
+                    <li data-color="#b71222" data-opacity="-20"></li>
+                    <li data-color="#b71222"></li>
+                    <li data-color="#b71222" data-opacity="+20"></li>
+                    <li data-color="#b71222" data-opacity="+50"></li>
+                    <li data-color="#b71222" data-opacity="+80"></li>
+                </ul>
+            </div>
+        </article>
+        <!--/.sg-article -->
+
+        <article id="sg-fonts" class="sg-section">
+            <div class="sg-h2">Fonts</div>
+
+            <div class="sg-callout sg-callout-warning">
+                <div class="sg-callout-title">Web fonts</div>
+                <p>If you use web fonts for your site, don't forget to call them as well in the header of the
+                    styleguide.</p>
+            </div>
+
+            <div class="sg-h3">Roboto</div>
+            <div>
+                <div class="sg-font" style="font-family:roboto">
+                    <div class="sg-font-title">Roboto 400 <span>@font-roboto</span></div>
+                    <div>
+                        abcdefghijklmnopqrstuvwxyz à â ç é è ê ë ï î ô ù ü û <br>
+                        ABCDEFGHIJKLMNOPQRSTUVWXYZ À Â Ç É È Ê Ë Ï Î Ô Ù Ü Û <br>
+                        1 2 3 4 5 6 7 8 9 0 % $ € & @ . , ? ! ’ “ ” ( ) - /
+                    </div>
                 </div>
 
-                <div class="sg-h3">CSS</div>
-                <div class="xrayhtml">
-                    <pre><code class="language-css">
-.class {
-    display: block;
-    color: #333;
-    background: #fff;
-}
-                    </code></pre>
+                <div class="sg-font" style="font-family:roboto; font-weight:700">
+                    <div class="sg-font-title">Roboto 700 <span>@font-roboto</span></div>
+                    <div>
+                        abcdefghijklmnopqrstuvwxyz à â ç é è ê ë ï î ô ù ü û <br>
+                        ABCDEFGHIJKLMNOPQRSTUVWXYZ À Â Ç É È Ê Ë Ï Î Ô Ù Ü Û <br>
+                        1 2 3 4 5 6 7 8 9 0 % $ € & @ . , ? ! ’ “ ” ( ) - /
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <div class="sg-h3">Times New Roman</div>
+            <div>
+                <div class="sg-font" style="font-family:'Times New Roman'">
+                    <div class="sg-font-title">Times New Roman</div>
+                    <div>
+                        abcdefghijklmnopqrstuvwxyz à â ç é è ê ë ï î ô ù ü û <br>
+                        ABCDEFGHIJKLMNOPQRSTUVWXYZ À Â Ç É È Ê Ë Ï Î Ô Ù Ü Û <br>
+                        1 2 3 4 5 6 7 8 9 0 % $ € & @ . , ? ! ’ “ ” ( ) - /
+                    </div>
                 </div>
 
-                <div class="sg-h3">JS</div>
-                <div class="xrayhtml">
-                    <pre><code class="language-javascript">
-myFunction() {
-    console.log('hello world');
-}
-                    </code></pre>
+                <div class="sg-font" style="font-family:'Times New Roman'; font-weight:bold">
+                    <div class="sg-font-title">Times New Roman Bold</div>
+                    <div>
+                        abcdefghijklmnopqrstuvwxyz à â ç é è ê ë ï î ô ù ü û <br>
+                        ABCDEFGHIJKLMNOPQRSTUVWXYZ À Â Ç É È Ê Ë Ï Î Ô Ù Ü Û <br>
+                        1 2 3 4 5 6 7 8 9 0 % $ € & @ . , ? ! ’ “ ” ( ) - /
+                    </div>
                 </div>
 
-            </div><!--/.sg-section -->
+                <div class="sg-font" style="font-family:'Times New Roman'; font-style:italic">
+                    <div class="sg-font-title">Times New Roman Italic</div>
+                    <div>
+                        abcdefghijklmnopqrstuvwxyz à â ç é è ê ë ï î ô ù ü û <br>
+                        ABCDEFGHIJKLMNOPQRSTUVWXYZ À Â Ç É È Ê Ë Ï Î Ô Ù Ü Û <br>
+                        1 2 3 4 5 6 7 8 9 0 % $ € & @ . , ? ! ’ “ ” ( ) - /
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!--/.sg-article -->
 
-            <div id="sg-readme" class="sg-section">
-                <div class="sg-h2">README.md</div>
-                <div class="md-viewer" data-file="README.md"></div>
-            </div><!--/.sg-section -->
+        <article id="sg-headings" class="sg-section">
+            <div class="sg-h2">Headings</div>
+            <div data-xrayhtml>
+                <h1 class="title1">h1. heading</h1>
 
-            <div id="sg-cssreadme" class="sg-section">
-                <div class="sg-h2">CSSReadme.md</div>
-                <div class="md-viewer" data-file="doc/CSSReadme.md"></div>
-            </div><!--/.sg-section -->
+                <h2 class="title2">h2. heading</h2>
 
-        </div><!--/.sg-main -->
+                <h3 class="title3">h3. heading</h3>
+                <h4 class="title4">h4. heading</h4>
+                <h5 class="title5">h5. heading</h5>
+                <h6 class="title6">h6. heading</h6>
+            </div>
+        </article>
+        <!--/.sg-article -->
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.1.3.min.js"><\/script>')</script>
-        <script src="js/vendor/X-rayHTML/X-rayHTML.custom.js"></script>
-        <script src="js/vendor/prism/prism.js"></script>
-        <script src="js/vendor/zeroclipboard/ZeroClipboard.min.js"></script>
-        <script src="js/vendor/showdown/showdown.js"></script>
-        <script src="js/main.js"></script>
-    </body>
+        <article id="sg-text" class="sg-section">
+            <div class="sg-h2">Text</div>
+            <div data-xrayhtml>
+                <p>Lorem ipsum dolor sit amet, <strong>strong text</strong> adipisicing elit. <a href="#_">Linked
+                    text</a> ratione eum nihil quos earum laudantium, eaque ullam omnis ut odio vero illum vel atque
+                    nisi iste tempora. Eius excepturi iste repellat, placeat esse aspernatur obcaecati voluptatem
+                    dolorum sapiente doloremque magnam.</p>
+
+                <p>Deleniti sapiente blanditiis ipsa quod architecto aliquam asperiores eveniet fugit harum perspiciatis
+                    omnis voluptas nam et error itaque impedit, ratione iste accusamus unde, reiciendis quia fuga
+                    consequuntur exercitationem dolorem voluptatum. Voluptatibus qui voluptate fuga neque illo debitis
+                    corporis cumque. Exercitationem similique, quas obcaecati minima, animi, tenetur ad, quibusdam
+                    voluptatum quasi deserunt dolor officia beatae totam odio non? Quam cumque laborum, atque.</p>
+            </div>
+        </article>
+        <!--/.sg-article -->
+
+        <article id="sg-lists" class="sg-section">
+            <div class="sg-h2">Lists</div>
+            <div data-xrayhtml>
+                <ul>
+                    <li>Lorem ipsum dolor</li>
+                    <li>Ipsa quod architecto</li>
+                    <li>Ratione iste accusamus</li>
+                </ul>
+            </div>
+        </article>
+        <!--/.sg-article -->
+
+        <article id="sg-blocks" class="sg-article">
+            <div class="sg-h2">Blocks</div>
+            &hellip;
+        </article>
+        <!--/.sg-article -->
+
+        <article id="sg-icons" class="sg-article">
+            <div class="sg-h2">Icons</div>
+            &hellip;
+
+            <!-- TODO: activate this code if you use Grunticon (and set your icons path) -->
+            <!--<div class="sg-icons-list clearer">Preview HTML file of SVG icons generated by Grunticon comes here.</div> &lt;!&ndash;/.sg-article &ndash;&gt;
+            <script>
+                var ajaxIconsPreviewUrl = '../images/common/svg/dist/preview.html';
+                function waitForElement() {
+                    if (typeof Bring !== "undefined") {
+                        Bring.settings.ready = false;
+                    }
+                    else {
+                        setTimeout(function() {
+                            waitForElement();
+                        }, 250);
+                    }
+                }
+            </script>-->
+        </article>
+        <!--/.sg-article -->
+
+    </section>
+    <!--/.sg-section -->
+
+    <section class="sg-section">
+        <div class="sg-h1">Styles</div>
+
+        <article id="sg-grid" class="sg-section">
+
+            <div class="sg-h2">Grid system</div>
+
+            <div class="sg-callout sg-callout-danger">
+                <div class="sg-callout-title">No grid system provided</div>
+                <p>The styleguide does not impose any grid system so you can use your favorite.</p>
+            </div>
+
+            <div class="sg-callout sg-callout-info">
+                <div class="sg-callout-title">Grid system helper</div>
+                <p>To display your grid in the styleguide you can use <code>&lt;div class="sg-cell">your
+                    text&lt;/div></code> as cell filler inside your cols. <em>(see example below)</em></p>
+            </div>
+
+            <div class="sg-cell">1</div>
+
+        </article>
+        <!--/.sg-article -->
+
+        <article id="sg-buttons" class="sg-section">
+
+            <div class="sg-h2">Buttons</div>
+
+            <div id="sg-buttons-style" class="sg-article">
+                <div class="sg-h3">Buttons style</div>
+                &hellip;
+            </div>
+
+            <div id="sg-buttons-size" class="sg-article">
+                <div class="sg-h3">Buttons size</div>
+                &hellip;
+            </div>
+
+            <div id="sg-buttons-color" class="sg-article">
+                <div class="sg-h3">Buttons color</div>
+                &hellip;
+            </div>
+
+            <div id="sg-buttons-transparency" class="sg-article">
+                <div class="sg-h3">Buttons transparency</div>
+                &hellip;
+            </div>
+
+            <div id="sg-buttons-font" class="sg-article">
+                <div class="sg-h3">Buttons font</div>
+                &hellip;
+            </div>
+
+        </article>
+        <!--/.sg-article -->
+
+        <article id="sg-forms" class="sg-section">
+
+            <div class="sg-h2">Forms</div>
+
+            <div id="sg-forms-text" class="sg-article">
+                <div class="sg-h3">Input text</div>
+                &hellip;
+            </div>
+
+            <div id="sg-forms-select" class="sg-article">
+                <div class="sg-h3">Select</div>
+                &hellip;
+            </div>
+
+            <div id="sg-forms-radio" class="sg-article">
+                <div class="sg-h3">Radio</div>
+                &hellip;
+            </div>
+
+            <div id="sg-forms-checkbox" class="sg-article">
+                <div class="sg-h3">Checkbox</div>
+                &hellip;
+            </div>
+
+            <div id="sg-forms-textarea" class="sg-article">
+                <div class="sg-h3">Textarea</div>
+                &hellip;
+            </div>
+
+            <div id="sg-forms-datepicker" class="sg-article">
+                <div class="sg-h3">Datepicker</div>
+                &hellip;
+            </div>
+
+            <div id="sg-forms-alerts" class="sg-article">
+                <div class="sg-h3">Alerts</div>
+                &hellip;
+            </div>
+
+        </article>
+        <!--/.sg-article -->
+
+        <article id="sg-sliders" class="sg-article">
+            <div class="sg-h2">Sliders</div>
+            &hellip;
+        </article>
+        <!--/.sg-article -->
+
+    </section>
+    <!--/.sg-section -->
+
+    <section class="sg-section">
+        <div class="sg-h1">Documentation</div>
+
+        <article class="sg-section">
+            <div class="sg-h2">Source code without snippet examples :</div>
+
+            <div class="sg-h3">HTML</div>
+            <div class="xrayhtml">
+                        <pre><code class="language-markup">
+                            &lt;h1 class="title1">H1 code source different from the snippet&lt;/h1>
+                            &lt;h2 class="title2">H2 code source different from the snippet&lt;/h2>
+                        </code></pre>
+            </div>
+
+            <div class="sg-h3">CSS</div>
+            <div class="xrayhtml">
+                        <pre><code class="language-css">
+                            .class {
+                            display: block;
+                            color: #333;
+                            background: #fff;
+                            }
+                        </code></pre>
+            </div>
+
+            <div class="sg-h3">JS</div>
+            <div class="xrayhtml">
+                        <pre><code class="language-javascript">
+                            myFunction() {
+                            console.log('hello world');
+                            }
+                        </code></pre>
+            </div>
+
+        </article>
+        <!--/.sg-article -->
+
+        <article id="sg-readme" class="sg-section">
+            <div class="sg-h2">README.md</div>
+            <div class="md-viewer" data-file="README.md"></div>
+        </article>
+        <!--/.sg-article -->
+
+        <article id="sg-cssreadme" class="sg-section">
+            <div class="sg-h2">CSSReadme.md</div>
+            <div class="md-viewer" data-file="doc/CSSReadme.md"></div>
+        </article>
+        <!--/.sg-article -->
+
+    </section>
+    <!--/.sg-section -->
+
+</div>
+<!--/.sg-main -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-2.1.3.min.js"><\/script>')</script>
+<script src="js/vendor/X-rayHTML/X-rayHTML.custom.js"></script>
+<script src="js/vendor/prism/prism.js"></script>
+<script src="js/vendor/zeroclipboard/ZeroClipboard.min.js"></script>
+<script src="js/vendor/showdown/showdown.js"></script>
+<script src="js/vendor/ntc.js/ntc.js"></script>
+<script src="js/modules/bring/bring.js"></script>
+<script src="js/modules/goto/goto.js"></script>
+<script src="js/common.js"></script>
+<script src="js/main.js"></script>
+</body>
 </html>

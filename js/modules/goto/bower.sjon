@@ -1,0 +1,32 @@
+{
+  "name": "goto",
+  "main": ["goto.min.js"],
+  "version": "0.1.1",
+  "homepage": "https://github.com/idomusha/goto",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/idomusha/goto"
+  },
+  "authors": [
+    "idomusha <idomusha@gmail.com>"
+  ],
+  "description": "scrolls to an anchor element",
+  "keywords": [
+    "scroll",
+    "hash",
+    "speed",
+    "vertical",
+    "horizontal",
+    "jquery"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "index.html",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md"
+  ],
+  "dependencies": {
+    "jquery": ">=1.7"
+  }
+}

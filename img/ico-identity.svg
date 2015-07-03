@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- The icon can be used freely in both personal and commercial projects with no attribution required, but always appreciated. 
+You may NOT sub-license, resell, rent, redistribute or otherwise transfer the icon without express written permission from iconmonstr.com -->
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="512px" height="512px" fill="#999" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+<path id="id-card-8-icon" d="M216.5,50v139h79V50H216.5z M256,134.833c-8.468,0-15.332-6.865-15.332-15.333
+s6.864-15.333,15.332-15.333c8.469,0,15.334,6.865,15.334,15.333S264.469,134.833,256,134.833z M462,149v313H50V149h136.5v40H90v233
+h332V189h-96.5v-40H462z M383,328.166h-98.666v-30H383V328.166z M318.334,384.831v-30H383v30H318.334z M180.922,322.116
+c-28.799-53.038-8.211-83.108,22.717-83.108c30.328,0,51.438,28.959,22.715,83.108c-9.435,17.788,10.049,22.015,30.979,26.845
+c20.921,4.824,19.312,15.854,19.312,35.87H130.631c0-20.016-1.609-31.046,19.312-35.87
+C170.426,344.235,190.641,340.013,180.922,322.116z M383,271.5h-98.666v-30H383V271.5z"></path> 
+</svg>

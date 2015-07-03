@@ -1,19 +1,17 @@
-
 /* ==========================================================================
    STYLEGUIDE STYLES
    ========================================================================== */
 
-
-
 /* ==========================================================================
    GLOBAL
    ========================================================================== */
-*, *:before, *:after {box-sizing: border-box;}
+*, *:before, *:after {
+    box-sizing: border-box;
+}
 
 .sg-body {
   margin: 0;
 }
-
 
 /* ==========================================================================
    TOPPER
@@ -81,7 +79,9 @@
   top: -2px;
 }
 
-.nav-is-opened .sg-nav-trigger span { background-color: transparent; }
+.nav-is-opened .sg-nav-trigger span {
+    background-color: transparent;
+}
 
 .nav-is-opened .sg-nav-trigger span:before {
   -webkit-transform: translateY(0) rotate(45deg);
@@ -102,7 +102,6 @@
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
 }
-
 
 /* ==========================================================================
    ASIDE
@@ -192,12 +191,12 @@
 }
 
 .sg-nav a:hover {
-  background: #ccc;
+    background: #333;
   color: #fff;
 }
 
 .sg-nav a[href^="http"]:hover {
-  background: #ccc url(../img/ico-link.svg) no-repeat right 12px center;
+    background: #333 url(../img/ico-link.svg) no-repeat right 12px center;
   background-size: 15px 15px;
 }
 
@@ -238,6 +237,10 @@
   display: block;
 }
 
+.sg-ico-identity {
+    background-image: url(../img/ico-identity.svg);
+}
+
 .sg-ico-html {
   background-image: url(../img/ico-html.svg);
 }
@@ -249,7 +252,6 @@
 .sg-ico-ressources {
   background-image: url(../img/ico-ressources.svg);
 }
-
 
 /* ==========================================================================
    MAIN
@@ -264,8 +266,17 @@
   margin-left: 265px;
 }
 
+.sg-header{
+    padding: 20px 64px;
+    height: 130px;
+}
+
 .sg-section {
   padding: 20px 64px;
+}
+
+.sg-article {
+    padding: 20px 0;
 }
 
 .sg-h1 {
@@ -302,7 +313,6 @@
   color: #333;
 }
 
-
 /* Grid
 ========================================================================== */
 .sg-cell {
@@ -316,7 +326,6 @@
   font-size: 13px;
 }
 
-
 /* Colors
 ========================================================================== */
 .sg-color {
@@ -327,11 +336,52 @@
   width: auto;
   min-width: 250px;
   border: 1px solid #ccc;
-  margin: 0 10px 13px 0;
+    margin: 0 5px 13px 0;
   border-radius: 50px 0 0 50px;
 }
 
-.sg-color span:first-child {
+.sg-color-blender {
+    font-size: 0;
+}
+
+.sg-color-blender > * {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 13px;
+}
+
+.sg-color-blender .sg-color {
+    border-radius: 0 50px 50px 0;
+    background-color: #eee;
+    border-color: #fff;
+    border-left: 0 none;
+    font-size: 17px;
+}
+
+.sg-color-blender .sg-color .sg-color-content {
+    margin-left: 15px;
+}
+
+.sg-color-blender .fields {
+    border: 1px solid #fff;
+    background-color: #eee;
+    padding: 16px 0 17px;
+    border-right: 0 none;
+    text-align: center;
+}
+
+.sg-color-blender .field {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 5px 13px 0;
+    min-width: 250px;
+}
+
+.sg-color-blender .field > label {
+    font-weight: 700;
+}
+
+.sg-color .sg-color-view {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -340,12 +390,13 @@
   border: 3px solid #fff;
 }
 
-.sg-color span:last-child {
+.sg-color .sg-color-content {
   padding: 5px;
   height: auto;
   display: inline-block;
   vertical-align: middle;
   line-height: 20px;
+    min-width: 145px;
 }
 
 .sg-color-group {
@@ -362,6 +413,39 @@
 
 .sg-color-group li {
   padding: 13px;
+    min-height: 45px;
+    position: relative;
+    padding-left: 30px;
+    margin-left: 25px;
+}
+
+.sg-color-group li .color-opacity{
+    background-color: white;
+    color: #2f2f2f;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    line-height: 39px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    left: -20px;
+    border: 3px solid transparent;
+}
+
+.sg-color-group li .color-hex{
+    float: right;
+    width: 60px;
+    position: relative;
+    top: 0;
+    right: 0;
+    font-size: 12px;
+    color: #2f2f2f;
+    height: 18px;
+    line-height: 18px;
 }
 
 li.sg-color-title {
@@ -370,18 +454,9 @@ li.sg-color-title {
   padding: 10px;
 }
 
-.sg-color-dark {
-  color: #fff;
-}
-
-.sg-color-light {
-  color: #333;
-}
-
 .sg-color-group li span:last-child {
   float: right;
 }
-
 
 /* Fonts
 ========================================================================== */
@@ -415,7 +490,6 @@ li.sg-color-title {
 .sg-font div:last-child {
   padding: 10px;
 }
-
 
 /* X-Ray HTML
 ========================================================================== */
@@ -492,13 +566,11 @@ li.sg-color-title {
   display: none;
 }
 
-
 /* Markdown viewer
 ========================================================================== */
 .md-viewer {
   border-left: 6px solid #eee;
 }
-
 
 /* Callouts
 ========================================================================== */
@@ -553,7 +625,6 @@ li.sg-color-title {
   color: #f0ad4e;
 }
 
-
 .sg-desc code,
 .sg-callout code {
   padding: 2px 4px;
@@ -574,7 +645,6 @@ li.sg-color-title {
   margin-bottom: 5px;
 }
 
-
 /* ==========================================================================
    HELPER CLASSES
    ========================================================================== */
@@ -586,4 +656,42 @@ li.sg-color-title {
 
 .sg-clearfix:after {
   clear: both;
+}
+/* ==========================================================================
+   ADD-ON
+   ========================================================================== */
+
+/* Icons (Grunt Icon preview styles)
+========================================================================== */
+.sg-icons-list pre {
+    float: left;
+    width: 25.6rem;
+    height: 12.8rem;
+    margin: 0 0.5rem;
+    padding: 2rem;
+    background-color: white;
+    display: table-caption;
+}
+
+.sg-icons-list pre::before {
+    content: none;
+}
+
+.sg-icons-list div {
+    float: left;
+    background-color: #eee;
+    margin: 0 0.5rem 13.8rem -26.1rem;
+    position: relative;
+    background-position: center center;
+    position: relative;
+    top: 128px;
+    left: 0;
+    width: 25.6rem !important;
+}
+
+.sg-icons-list hr {
+    float: left;
+    width: 0;
+    height: 12.8rem;
+    border: 0 none;
 }
