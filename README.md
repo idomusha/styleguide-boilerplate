@@ -4,7 +4,7 @@ The purpose of Styleguide Boilerplate is to provide you with a `minimal stylegui
 
 
 ## Demo
-[http://bbrochier.github.io/styleguide-boilerplate/](http://bbrochier.github.io/styleguide-boilerplate/)
+[http://idomusha.github.io/styleguide-boilerplate/](http://bbrochier.github.io/styleguide-boilerplate/)
 
 ## Features
 - Styleguide structure & navigation
