@@ -215,6 +215,13 @@
      ========================================================================== */
     if ($('.sg-icons-list').length) {
       if (ajaxIconsPreviewUrl != undefined) {
+        var beforeLoad = function() {
+          if (GoTo != undefined && window.location.hash.length) {
+            setTimeout(function() {
+              GoTo.move(window.location.hash);
+            }, 1500);
+          }
+        }
         var afterLoad = function(data) {
           var data = data.replace('<body', '<body><div id="body"').replace('</body>', '</div></body>');
           data = data.replace(/<h1>[\s\S]*?<\/h1>/, '');
@@ -222,7 +229,11 @@
           $('.sg-icons-list').html($body);
         }
 
-        Bring.load(ajaxIconsPreviewUrl, 'html', afterLoad);
+        Bring.load({
+          url: ajaxIconsPreviewUrl,
+          loader: beforeLoad,
+          callback: afterLoad
+        });
       }
     }
 

@@ -49,96 +49,88 @@
      * @param {Boolean} [loader=false]: Active or not the pre-request callback function beforeSend.
      * @param {Boolean} [fail=false]: Active or not the error callback function (if the request fails).
      */
-    load: function(url, returned, callback, param, request, loader, fail) {
+    load: function(options) {
+
+      options = $.extend({
+        url: '',
+        returned: 'html',
+        callback: null,
+        param: {},
+        request: 'GET',
+        loader: null,
+        fail: null
+      }, options);
+
       if (s.debug) console.log('##################### load()');
       var loading;
       var failed;
       var succeed;
-      loader = loader || false;
-      fail = fail || false;
-      request = request || 'GET';
 
-      if ($.isFunction(callback)) {
-        succeed = function(data) {
-          if (s.debug) console.log('~~~~~~~~ success ~~~~~~~~');
-          s.ready = true;
-          $('body').removeClass('js-bring-loading');
-          if (GoTo != undefined && window.location.hash.length) {
-            setTimeout(function() {
-              GoTo.move(window.location.hash);
-            }, 1500);
-          }
+      loading = function(jqXHR, settings) {
+        if (s.debug) console.log('~~~~~~~~ beforeSend ~~~~~~~~');
+        s.ready = false;
+        $('body').addClass('js-bring-loading');
 
-          try {
-            NProgress.done();
-          }
-          catch (e) {
-            //console.log(e);
-          }
-
-          s.oDataCache[url] = data;
-          eval(callback(data));
+        // loader specified
+        if ($.isFunction(options.loader)) {
+          eval(options.loader());
         }
-      }
-      else {
-        succeed = function(jqXHR, settings) {
-          if (s.debug) console.log('~~~~~~~~ success ~~~~~~~~');
-          s.ready = true;
-          $('body').removeClass('js-bring-loading');
-          if (GoTo != undefined && window.location.hash.length) {
-            setTimeout(function() {
-              GoTo.move(window.location.hash);
-            }, 1500);
-          }
 
-          try {
-            NProgress.done();
-          }
-          catch (e) {
-            console.log(e);
-          }
+        // NProgress (default loader) : start
+        try {
+          NProgress.start();
+        }
+        catch (e) {
+          console.info('Bring: NProgress is not installed.');
         }
       }
 
-      if ($.isFunction(loader)) {
-        loading = loader;
-      }
-      else {
-        loading = function(jqXHR, settings) {
-          if (s.debug) console.log('~~~~~~~~ beforeSend ~~~~~~~~');
-          s.ready = false;
-          $('body').addClass('js-bring-loading');
-          try {
-            NProgress.start();
-          }
-          catch (e) {
-            console.info('Bring: NProgress is not installed.');
-          }
+      succeed = function(data) {
+
+        // default callback
+        if (s.debug) console.log('~~~~~~~~ success ~~~~~~~~');
+        s.ready = true;
+        $('body').removeClass('js-bring-loading');
+
+        // NProgress (default loader) : end
+        try {
+          NProgress.done();
+        }
+        catch (e) {
+          //console.log(e);
+        }
+
+        s.oDataCache[options.url] = data;
+
+        // callback specified
+        if ($.isFunction(options.callback)) {
+          eval(options.callback(data));
         }
       }
 
-      if ($.isFunction(fail)) {
-        failed = fail;
-        eval(fail);
-      }
-      else {
-        failed = function(jqXHR, textStatus, errorThrown) {
-          if (s.debug) console.log('~~~~~~~~ error ~~~~~~~~');
-          s.ready = true;
-          $('body').removeClass('js-bring-loading');
-          try {
-            NProgress.done();
-          }
-          catch (e) {
-            //console.log(e);
-          }
+      failed = function(jqXHR, textStatus, errorThrown) {
+        if (s.debug) console.log('~~~~~~~~ error ~~~~~~~~');
+        s.ready = true;
+        $('body').removeClass('js-bring-loading');
+
+        // NProgress (default loader) : end
+        try {
+          NProgress.done();
+        }
+        catch (e) {
+          //console.log(e);
+        }
+
+        // callback specified
+        if ($.isFunction(options.fail)) {
+          eval(options.fail());
         }
       }
 
       // Relative URL
       /*if (!(url.match('^http'))) {
-        url = settingsGlobal.pathAjax + url;
-      }*/
+       url = settingsGlobal.pathAjax + url;
+       }*/
 
       //console.log('url: '+url);
       //console.log('datType: '+returned);
@@ -150,10 +142,10 @@
 
       $.ajax({
         cache: false,
-        type: request,
-        url: url,
-        data: param,
-        dataType: returned,
+        type: options.request,
+        url: options.url,
+        data: options.param,
+        dataType: options.returned,
         error: failed,
         beforeSend: loading,
         success: succeed

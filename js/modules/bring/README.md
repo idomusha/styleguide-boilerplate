@@ -12,7 +12,7 @@
 
 ### Bring your data
 All parameters are optional.
-The order is important: to set third parameter, you must define the 2 previous parameters (until the next update).
+The order does not matter.
 ```js
     /**
      * AJAX request
@@ -24,26 +24,26 @@ The order is important: to set third parameter, you must define the 2 previous p
      * @param {Function} success: A function to be called if the request succeeds.
      * @param {Object or String} param: Data to be sent to the server. It is converted to a query string, if not already a string.
      * @param {String} request (default: 'GET'): The type of request to make ("POST" or "GET").
-     * @param {Boolean} [loader=false]: Active or not the pre-request callback function beforeSend.
-     * @param {Boolean} [fail=false]: Active or not the error callback function (if the request fails).
+     * @param {Boolean} [loader=null]: Active or not the pre-request callback function beforeSend.
+     * @param {Boolean} [fail=null]: Active or not the error callback function (if the request fails).
      */
-    var url : "path/page-to-load.html";
-    var loader = function() {
-        <!-- error callback function -->
-    }
-    var succeed = function(data) {
-        <!-- success callback function -->
-    }
-    var fail = function() {
-        <!-- error callback function -->
-    }
 
-    Bring.load(url, 'html', succeed, {}, 'GET', loader, fail);
+    Bring.load({
+        url: "path/page-to-load.html",
+        returned: 'json',
+        callback: function(data) {
+            <!-- success callback function -->
+        },
+        param: {id: menuId},
+        request: 'POST',
+        loader: function() {
+            <!-- before send function -->
+        },
+        fail: function() {
+            <!-- error callback function -->
+        }
+    });
 ```
-
-#### Next update:
-- set default functions in options
-- parameters with objects (order does not matter anymore)
 
 ## You can also grab Bring using bower:
 ```
